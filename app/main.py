@@ -3,6 +3,12 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
+@app.get("/")
+def root():
+    return {
+        "serviceStatus":"OK"
+    } 
+
 @app.get("/add")
 def add(a: int = Query(...), b: int = Query(...)):
     result = a + b
