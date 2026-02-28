@@ -13,3 +13,8 @@ def root():
 def add(a: int = Query(...), b: int = Query(...)):
     result = a + b
     return {"result": result}
+
+@app.get("/multiply")
+def add(a: int = Query(...), b: int = Query(...)):
+    result = a * b
+    return {"result": result}
