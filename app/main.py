@@ -15,6 +15,6 @@ def add(a: int = Query(...), b: int = Query(...)):
     return {"result": result}
 
 @app.get("/multiply")
-def add(a: int = Query(...), b: int = Query(...)):
+def multiply(a: int = Query(...), b: int = Query(...)):
     result = a * b
     return {"result": result}
