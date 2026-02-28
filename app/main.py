@@ -18,3 +18,8 @@ def add(a: int = Query(...), b: int = Query(...)):
 def multiply(a: int = Query(...), b: int = Query(...)):
     result = a * b
     return {"result": result}
+
+@app.get("/divide")
+def divide(a: int = Query(...), b: int = Query(...)):
+    result = a / b
+    return {"result": result}
