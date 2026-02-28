@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sum-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sum-service
+  template:
+    metadata:
+      labels:
+        app: sum-service
+    spec:
+      containers:
+      - name: sum-service
+        image: sonsai/src-app-learn-docker-k8s:latest
+        ports:
+        - containerPort: 80
