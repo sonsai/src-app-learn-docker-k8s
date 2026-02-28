@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: sum-service
-        image: sonsai/src-app-learn-docker-k8s:latest
+        image: ghcr.io/sonsai/my-sum-service:latest
         ports:
         - containerPort: 80
